@@ -1,0 +1,24 @@
+{
+  "name": "carrychain-web3",
+  "version": "1.0.0",
+  "description": "A decentralized human-powered logistics network powered by ARC and USDC",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js"
+  },
+  "keywords": [
+    "web3",
+    "blockchain",
+    "arc",
+    "usdc",
+    "logistics",
+    "smart-contract"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  }
+}

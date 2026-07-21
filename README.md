@@ -125,6 +125,22 @@ The current prototype includes:
 
 ### DeliveryEscrow.sol
 
+## 🚀 Deployed Smart Contracts — ARC Testnet
+
+CarryChain is deployed on the ARC Testnet.
+
+- Network: ARC Testnet
+- Chain ID: 5042002
+- Gas Token: USDC
+
+### Contract Addresses
+
+| Contract | Address |
+|---|---|
+| CarryToken | 0x603cca86A5a33af850c99690186720F6C33f5464 |
+| Reputation | 0xd9d02c7aF1f4A3b314ee999Debf29CCA046750A1 |
+| DeliveryEscrow | 0x1064aacbeDb739993D8e4687C690b1dF35E7C09F |
+
 Manages:
 
 - Delivery creation

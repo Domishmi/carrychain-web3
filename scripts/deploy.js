@@ -3,8 +3,22 @@ const hre = require("hardhat");
 async function main() {
   console.log("Deploying CarryChain contracts...");
 
-  const CarryToken = await hre.ethers.getContractFactory("CarryToken");
-  const carryToken = await CarryToken.deploy();
+  const usdcAddress =
+    process.env.USDC_CONTRACT_ADDRESS;
+
+  if (!usdcAddress) {
+    throw new Error(
+      "USDC_CONTRACT_ADDRESS is not set"
+    );
+  }
+
+  const CarryToken =
+    await hre.ethers.getContractFactory(
+      "CarryToken"
+    );
+
+  const carryToken =
+    await CarryToken.deploy();
 
   await carryToken.waitForDeployment();
 
@@ -13,8 +27,13 @@ async function main() {
     await carryToken.getAddress()
   );
 
-  const Reputation = await hre.ethers.getContractFactory("Reputation");
-  const reputation = await Reputation.deploy();
+  const Reputation =
+    await hre.ethers.getContractFactory(
+      "Reputation"
+    );
+
+  const reputation =
+    await Reputation.deploy();
 
   await reputation.waitForDeployment();
 
@@ -24,10 +43,14 @@ async function main() {
   );
 
   const DeliveryEscrow =
-    await hre.ethers.getContractFactory("DeliveryEscrow");
+    await hre.ethers.getContractFactory(
+      "DeliveryEscrow"
+    );
 
   const deliveryEscrow =
-    await DeliveryEscrow.deploy();
+    await DeliveryEscrow.deploy(
+      usdcAddress
+    );
 
   await deliveryEscrow.waitForDeployment();
 

@@ -7,7 +7,7 @@ async function main() {
   console.log("Deploying CarryChain contracts...");
 
   const usdcAddress =
-    process.env.USDC_CONTRACT_ADDRESS;
+    "0x3600000000000000000000000000000000000000";
 
   if (!usdcAddress) {
     throw new Error(
